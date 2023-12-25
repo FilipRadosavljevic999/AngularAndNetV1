@@ -1,0 +1,33 @@
+﻿@using EmployeeNetProject.DTO
+@model IEnumerable<EmployeeForShow>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+<h2>Employee Work Hours</h2>
+<div class="container">
+    <table class="table  tableEmloyee" >
+    <thead>
+        <tr class="table-Headrow">
+            <th class="table-row">Employee Name</th>
+            <th class="table-row">Total Hours Worked</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var employee in Model)
+            {
+                var employeeName = (string.IsNullOrEmpty(employee.EmployeeName)) ? "Other" : employee.EmployeeName;
+                var lessThan100Hours = (employee.TotalHoursWorked < 100) ? "less-than-100" : "";
+                <tr class="@lessThan100Hours">
+                    <td class="table-row">@employeeName</td>
+                    <td class="table-row">@employee.TotalHoursWorked hrs</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+</div>
+
+</div>

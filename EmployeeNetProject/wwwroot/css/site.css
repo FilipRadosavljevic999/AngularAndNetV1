@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+   
+}
+
+body {
+  margin-bottom: 60px;
+}
+.table-Headrow {
+    border: 1px solid black;
+    font-weight: bold;
+    background-color:gray;
+}
+.table-row {
+    border: 1px solid black;
+    font-weight: bold;
+}
+.less-than-100 {
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: lightcoral;
+}
+.tableEmloyee {
+    border-collapse: collapse;
+    width: 100%;
+}
